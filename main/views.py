@@ -15,7 +15,7 @@ def HomePage(request,template_name="homepage.html"):
                                 email=request.POST.get('email'),
                                 password=request.POST.get('password')
             )
-            messages.success(request,"User created successfully",fail_silently=True)
+            messages.success(request,"User created  successfully ",fail_silently=True)
         except Exception as e :
             print("Error creating")
             pass

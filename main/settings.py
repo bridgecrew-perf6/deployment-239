@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CRONJOBS = [
+    ('*/5 * * * *', 'main.schedules.my_scheduled_job')
+]
